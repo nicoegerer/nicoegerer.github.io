@@ -1,8 +1,12 @@
 {
 	"folders": [
 		{
+			"name": "yurrr",
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "yurrr"
+	}
 }

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nico Egerer</title>
+  <link rel="icon" href="images/illustration.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/illustration.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Nico</a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">Über Mich</a>
+        <a href="/projects">Projekte</a>
+        <a href="/work">Erfahrung</a>
+        <a href="/contact">Kontakt</a>
+      </div>
+
+      <div class="nav-icons">
+        <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
+        <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="/">Home</a>
+      <a href="/about">Über Mich</a>
+      <a href="/projects">Projekte</a>
+      <a href="/JumpJump">JumpJump</a>
+      <a href="/work">Erfahrung</a>
+      <a href="/contact">Kontakt</a>
+      <a href="/profiles">Meine Profile</a>
+      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-greeting">Hi ich bin</p>
+      <h1 class="hero-name">Nico</h1>
+    </div>
+    <img src="images/illustration.png" alt="Nico Egerer" class="hero-image" />
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <p class="intro-text">
+        Nico ist ein angehender Softwareentwickler aus Wolfratshausen. Er programmiert gerne kleine Projekte,
+        aktuell vor allem mit C++, und versucht ständig neue Sprachen und Technologien zu lernen.
+        Wenn er nicht gerade coded, ist er meistens beim Sport, in den Bergen oder am Klavier.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ÜBER MICH -->
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img src="images/passbild.jpg" alt="Foto von Nico" class="about-photo" />
+        </div>
+        <div class="about-content">
+          <span class="label">Über</span>
+          <h2 class="section-heading dark">Wer ich bin</h2>
+          <p class="about-text">
+            Ich bin 19 Jahre alt, aber meine Begeisterung für Technik begleitet mich schon seit meiner Kindheit.
+            Schon früh hat mich fasziniert, wie Computer funktionieren und wie man scheinbar komplizierte
+            Probleme lösen kann.
+          </p>
+          <p class="about-text">
+            Noch bevor ich wusste, was Programmierung oder PowerShell ist, gab es diesen Moment: Jemand öffnet
+            die Konsole, tippt ein paar Befehle — und plötzlich funktioniert alles wieder.
+            Da wusste ich: Das will ich auch können.
+          </p>
+          <p class="about-text">
+            Heute arbeite ich am liebsten an eigenen Projekten. Besonders motiviert mich, am Ende ein Ergebnis
+            zu sehen — egal ob kleine Games oder diese Website.
+          </p>
+          <div class="about-buttons">
+            <a href="/CV" target="_blank" rel="noopener" class="btn btn-light">Lebenslauf</a>
+            <a href="/about" class="link-arrow">mehr →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ERFAHRUNG BANNER -->
+  <section class="experience-banner">
+    <div class="container">
+      <span class="label white">Arbeit</span>
+      <h2 class="section-heading white">Erfahrung</h2>
+      <p class="banner-text">
+        Ich habe mit verschiedenen Teams und realen Projekten gearbeitet.
+        Jede Station hat mich als Entwickler geprägt.
+      </p>
+      <a href="/work" class="btn btn-outline">Details</a>
+    </div>
+  </section>
+
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-entries">
+
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2026</span>
+              <h3 class="timeline-title">Website & JumpJump deployed</h3>
+              <p class="timeline-text">Diese Website erstellt und JumpJump im Web spielbar gemacht.</p>
+              <a href="/work" class="link-arrow small">mehr →</a>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2024</span>
+              <h3 class="timeline-title">Reiser Simulation and Training</h3>
+              <p class="timeline-text">Ausbildung zum Fachinformatiker für Anwendungsentwicklung gestartet.</p>
+              <a href="/work" class="link-arrow small">mehr →</a>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2024</span>
+              <h3 class="timeline-title">Eigene Spiele mit Raylib</h3>
+              <p class="timeline-text">Erstellung meiner ersten eigenen Spiele mit Raylib in C++.</p>
+              <a href="/work" class="link-arrow small">mehr →</a>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2024</span>
+              <h3 class="timeline-title">C++ Kurse</h3>
+              <p class="timeline-text">C++ Kurse über Udemy absolviert und Grundlagen vertieft.</p>
+              <a href="/work" class="link-arrow small">mehr →</a>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2023</span>
+              <h3 class="timeline-title">IT Praktikum bei EVIA</h3>
+              <p class="timeline-text">Erste Praxiserfahrung im IT-Umfeld gesammelt.</p>
+              <a href="/work" class="link-arrow small">mehr →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MEIN ZIEL -->
+  <section class="goal">
+    <div class="container">
+      <div class="goal-grid">
+        <div class="goal-image-wrap">
+          <img src="images/selfie.jpg" alt="Nico in den Bergen" class="goal-image" />
+        </div>
+        <div class="goal-content">
+          <span class="label white">Vision</span>
+          <h2 class="section-heading white">Mein Ziel</h2>
+          <p class="goal-text">
+            Mein Ziel ist es, mich Schritt für Schritt zu einem sehr guten Softwareentwickler zu entwickeln —
+            technisch wie auch organisatorisch und kommunikativ.
+          </p>
+          <p class="goal-text">
+            Strukturiertes Arbeiten und das Koordinieren von Aufgaben liegen mir. Langfristig kann ich mir gut
+            vorstellen, Projekte zu leiten oder eine Führungsposition zu übernehmen.
+          </p>
+          <p class="goal-text">
+            Das große Ziel: eine eigene IT-Abteilung leiten oder ein eigenes Unternehmen gründen und
+            innovative Softwarelösungen entwickeln.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJEKTE -->
+  <section class="projects">
+    <div class="container">
+      <div class="projects-header">
+        <span class="label white">Portfolio</span>
+        <h2 class="section-heading white">Ausgewählte Arbeiten</h2>
+        <p class="projects-subline">Einige meiner besten Projekte aus diesem Jahr</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="images/ampel.jpg" alt="Raspberry Pi Kreuzung" class="project-image" />
+          <div class="project-info">
+            <h3 class="project-title">Projekte mit dem Raspberry Pi</h3>
+            <p class="project-text">Kreuzungssimulation, Luftfeuchtigkeitsmesser und mehr.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">MQTT</span>
+              <span class="tag">NodeRed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/game.jpg" alt="JumpJump Spiel" class="project-image" />
+          <div class="project-info">
+            <h3 class="project-title">JumpJump</h3>
+            <p class="project-text">Platformer-Spiel in C++, kompiliert mit WebAssembly.</p>
+            <div class="project-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Shell</span>
+              <span class="tag">WASM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/website.jpg" alt="Meine Website" class="project-image" />
+          <div class="project-info">
+            <h3 class="project-title">Diese Website</h3>
+            <p class="project-text">Strukturiert wie ein echtes Kundenprojekt — von Figma bis Webflow.</p>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Webflow</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-footer">
+        <a href="/projects" class="btn btn-outline">Alle ansehen</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ZUKUNFT -->
+  <section class="future">
+    <div class="container future-inner">
+      <span class="label white">Zukunft</span>
+      <h2 class="section-heading white">Zukünftige Projekte</h2>
+      <p class="future-text">
+        Komplexere Spiele mit C++ und Unreal Engine — auch mit Co-op-Modus.
+        Außerdem plane ich mich in künstliche Intelligenz und maschinelles Lernen zu vertiefen.
+        Neue Technologien reizen mich.
+      </p>
+      <a href="/blog" class="btn btn-dark">Aktuelles</a>
+    </div>
+  </section>
+
+
+  <!-- KONTAKT -->
+  <section class="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-form-wrap">
+          <span class="label white">Schreib mir</span>
+          <h2 class="section-heading white">Lass uns sprechen</h2>
+          <p class="contact-subline">Ich antworte schnell auf Nachrichten</p>
+
+          <form class="contact-form" method="get" id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" maxlength="256" class="input" />
+
+            <label for="email">E-Mail Adresse</label>
+            <input type="email" id="email" name="email" maxlength="256" required class="input" />
+
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="field" maxlength="5000" required placeholder="Deine Nachricht..." class="input textarea"></textarea>
+
+            <button type="submit" class="btn btn-outline">Absenden</button>
+          </form>
+        </div>
+
+        <div class="contact-image-wrap">
+          <img src="images/kontakt.jpg" alt="Kontaktbild" class="contact-image" />
+          <a href="/contact" class="btn btn-outline top-margin">Meine Kontaktdaten</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-divider"></div>
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <a href="/" class="footer-link-main">Startseite</a>
+        </div>
+        <div class="footer-col">
+          <a href="/about" class="footer-link-main">Über Mich</a>
+          <a href="/CV" class="footer-link-sub">Lebenslauf</a>
+        </div>
+        <div class="footer-col">
+          <a href="/projects" class="footer-link-main">Projekte</a>
+        </div>
+        <div class="footer-col">
+          <a href="/contact" class="footer-link-main">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <a href="/profiles" class="footer-link-main">Meine Profile</a>
+          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-link-sub">GitHub</a>
+          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-link-sub">LinkedIn</a>
+        </div>
+
+        <div class="footer-logo-col">
+          <a href="/" class="footer-logo">Nico</a>
+          <div class="footer-social">
+            <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
+            <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js?site=69b96f89de84a9d6cf0a6e6c" type="text/javascript"></script>
+  <script src="js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript"></script>
+  <script src="js/webflow.schunk.08779b17d1882f59.js" type="text/javascript"></script>
+  <script src="js/webflow.schunk.8bcd8860e07a4086.js" type="text/javascript"></script>
+  <script src="js/webflow-script.js" type="text/javascript"></script>
+
+  </script>
+
+</body>
+</html>
