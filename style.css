@@ -165,7 +165,6 @@
   .github-icon   { background-image: url('images/vector.svg'); }
   .linkedin-icon { background-image: url('images/linkedin-201.svg'); }
   
-  /* Burger Button */
   .burger {
     display: flex;
     flex-direction: column;
@@ -847,7 +846,7 @@
     font-size: 0.95rem;
     font-weight: 600;
     transition: opacity 0.2s;
-    margin-right: 70px;
+    margin-right: clamp(0.8rem, 4vw, 70px);
   }
   .footer-main:hover { opacity: 0.65; }
   
@@ -897,7 +896,7 @@
     }
     .about-center { order: -1; }
     .about-photo  { width: clamp(160px, 45vw, 240px); }
-    .about-right  { display: none; } /* Zitat auf Tablet ausblenden */
+    .about-right  { display: none; }
     .about-buttons { justify-content: center; }
   
     .tl-wrap { max-width: 100%; }
@@ -914,7 +913,32 @@
     .contact-img-col { order: -1; }
     .contact-img { max-width: 280px; }
   
-    .footer-links { gap: var(--gap-m); }
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: clamp(0.8rem, 2vw, var(--gap-l));
+      width: 100%;
+    }
+    
+    .footer-col {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    
+    .footer-main,
+    .footer-sub {
+      white-space: nowrap;
+    }
+    
+    .footer-main {
+      font-size: clamp(0.7rem, 1vw, 0.95rem);
+      margin-right: 0;
+    }
+    
+    .footer-sub {
+      font-size: clamp(0.65rem, 0.9vw, 0.82rem);
+    }
   
     .exp-inner { max-width: 100%; margin-right: 0; }
   }
@@ -959,18 +983,7 @@
     .project-img   { height: 180px; }
   
     .contact-img { max-width: 220px; }
-  
-    .footer-links {
-      flex-wrap: nowrap;
-      gap: 1.2rem;
-      overflow-x: auto;
-      padding-bottom: 0.5rem;
-      justify-content: flex-start;
-    }
-    .footer-main { font-size: 0.78rem; }
-    .footer-sub  { font-size: 0.7rem; }
-    .footer-col  { gap: 0.3rem; }
-  
+        
     .goal-image { width: 50vw; height: 50vw; max-width: 200px; max-height: 200px; }
   
     .sidebar { width: 80vw; }
