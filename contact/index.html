@@ -1,85 +1,217 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seite in Bearbeitung</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      text-align: center;
-      padding: 40px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(15px);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-      max-width: 500px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      opacity: 0.9;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      font-size: 1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, #ff7e5f, #feb47b);
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    .footer {
-      margin-top: 20px;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Nico Egerer</title>
+  <meta name="description" content="Nimm Kontakt mit Nico Egerer auf — per Formular, E-Mail, LinkedIn oder WhatsApp." />
+  <link rel="icon" href="../images/illustration.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🚧 Seite in Bearbeitung</h1>
-    <p>
-      Diese Website wird aktuell mit viel Sorgfalt und Liebe zum Detail neu gestaltet.
-      Bald erwartet dich hier ein modernes und einzigartiges Erlebnis.
-    </p>
-    <p>
-      Schau gerne in Kürze wieder vorbei – es lohnt sich!
-    </p>
 
-    <a href="https://nicoegerer.de" class="btn">Zur Hauptseite zurückkehren</a>
-
-    <div class="footer">
-      © 2026 Nico Egerer
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Nico</a>
+      <div class="nav-right">
+        <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
+        <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
+        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <nav class="sidebar" id="sidebar" aria-hidden="true">
+    <button class="sidebar-close" id="sidebar-close" aria-label="Menü schließen">✕</button>
+    <div class="sidebar-links">
+      <a href="/" class="sidebar-link-main">Home</a>
+      <a href="/about" class="sidebar-link-main">Über Mich</a>
+      <a href="/projects" class="sidebar-link-main">Projekte</a>
+      <a href="/JumpJump" class="sidebar-link-sub">JumpJump</a>
+      <a href="/work" class="sidebar-link-main">Erfahrung</a>
+      <a href="/contact" class="sidebar-link-main active">Kontakt</a>
+      <a href="/profiles" class="sidebar-link-main">Meine Profile</a>
+      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="sidebar-link-sub">GitHub</a>
+      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="sidebar-link-sub">LinkedIn</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="label white">Schreib mir</span>
+      <h1 class="page-hero-title">Lass uns <span class="page-hero-accent">reden</span></h1>
+      <p class="page-hero-sub">Ich antworte schnell — egal ob Projekt, Frage oder einfach Hallo.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT MAIN -->
+  <section class="contact-section">
+    <div class="contact-section-inner">
+
+      <!-- FORM -->
+      <div class="contact-form-col reveal">
+        <span class="label">Direktnachricht</span>
+        <h2 class="section-heading dark">Kontaktformular</h2>
+        <p class="contact-subline-dark">Füll das Formular aus — ich melde mich innerhalb von 24 Stunden.</p>
+
+        <form class="contact-form" id="contact-form">
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="cf-name">Vorname &amp; Nachname</label>
+              <input type="text" id="cf-name" name="name" maxlength="256" class="cf-input" placeholder="Max Mustermann" required />
+            </div>
+            <div class="cf-field">
+              <label for="cf-email">E-Mail Adresse</label>
+              <input type="email" id="cf-email" name="email" maxlength="256" class="cf-input" placeholder="max@beispiel.de" required />
+            </div>
+          </div>
+          <div class="cf-field">
+            <label for="cf-phone">Telefon (optional)</label>
+            <input type="tel" id="cf-phone" name="phone" class="cf-input" placeholder="+49 123 456789" />
+          </div>
+          <div class="cf-field">
+            <label for="cf-subject">Betreff</label>
+            <select id="cf-subject" name="subject" class="cf-input cf-select">
+              <option value="">Bitte auswählen…</option>
+              <option value="projekt">Zusammenarbeit / Projekt</option>
+              <option value="ausbildung">Ausbildung / Job</option>
+              <option value="frage">Allgemeine Frage</option>
+              <option value="feedback">Feedback</option>
+              <option value="anderes">Anderes</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label for="cf-msg">Nachricht</label>
+            <textarea id="cf-msg" name="message" maxlength="5000" required placeholder="Deine Nachricht…" class="cf-input cf-textarea"></textarea>
+          </div>
+          <button type="submit" class="btn btn-blau cf-submit">Nachricht senden</button>
+        </form>
+
+        <div class="cf-success" id="cf-success">✓ Danke! Deine Nachricht wurde gesendet.</div>
+        <div class="cf-error"   id="cf-error">✗ Fehler beim Senden. Bitte versuche es erneut.</div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info-col reveal reveal-delay-2">
+        <span class="label">Direktkontakt</span>
+        <h3 class="contact-info-title">Andere Wege</h3>
+        <p class="contact-info-sub">Du erreichst mich auch direkt über diese Kanäle:</p>
+
+        <div class="contact-channels">
+          <a href="mailto:nico@nicoegerer.de" class="contact-channel">
+            <div class="channel-icon">✉️</div>
+            <div class="channel-text">
+              <span class="channel-label">E-Mail</span>
+              <span class="channel-value">nico@nicoegerer.de</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="contact-channel">
+            <div class="channel-icon">💼</div>
+            <div class="channel-text">
+              <span class="channel-label">LinkedIn</span>
+              <span class="channel-value">linkedin.com/in/nico-egerer</span>
+            </div>
+          </a>
+          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="contact-channel">
+            <div class="channel-icon">🐙</div>
+            <div class="channel-text">
+              <span class="channel-label">GitHub</span>
+              <span class="channel-value">github.com/nicoegerer</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-response-info">
+          <div class="response-badge">
+            <span class="response-icon">⚡</span>
+            <div>
+              <strong>Schnelle Antwortzeit</strong>
+              <p>In der Regel antworte ich innerhalb von 24 Stunden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <div class="faq-header reveal">
+        <span class="label white">Häufige Fragen</span>
+        <h2 class="section-heading white">FAQ</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Bist du offen für Nebenprojekte?</button>
+          <div class="faq-a">
+            <p>Ja — ich bin grundsätzlich offen für interessante Projekte, die zu meinem Profil passen. Schreib mir einfach und schildere dein Vorhaben.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-q" aria-expanded="false">Welche Technologien bevorzugst du?</button>
+          <div class="faq-a">
+            <p>Aktuell arbeite ich am liebsten mit C++, Python und vanilla Web-Technologien. Neue Technologien lerne ich aber gerne — Neugierde ist meine Stärke.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-q" aria-expanded="false">Wo bist du erreichbar?</button>
+          <div class="faq-a">
+            <p>Per E-Mail, LinkedIn und über dieses Formular. Ich checke alle Kanäle regelmäßig und antworte in der Regel innerhalb eines Tages.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-q" aria-expanded="false">Kann ich deinen Code für Projekte nutzen?</button>
+          <div class="faq-a">
+            <p>Öffentliche Repositories auf GitHub stehen unter den jeweiligen Lizenzen zur Verfügung. Für kommerzielle Nutzung bitte vorher anfragen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <div class="footer-col"><a href="/" class="footer-main">Startseite</a></div>
+        <div class="footer-col">
+          <a href="/about" class="footer-main">Über Mich</a>
+          <a href="/CV" class="footer-sub">Lebenslauf</a>
+        </div>
+        <div class="footer-col"><a href="/projects" class="footer-main">Projekte</a></div>
+        <div class="footer-col"><a href="/contact" class="footer-main">Kontakt</a></div>
+        <div class="footer-col">
+          <a href="/profiles" class="footer-main">Meine Profile</a>
+          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-sub">GitHub</a>
+          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-sub">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="/" class="footer-logo">Nico</a>
+        <div class="footer-social">
+          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
+          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

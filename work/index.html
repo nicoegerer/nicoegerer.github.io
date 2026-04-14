@@ -1,85 +1,244 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seite in Bearbeitung</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      text-align: center;
-      padding: 40px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(15px);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-      max-width: 500px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      opacity: 0.9;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      font-size: 1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, #ff7e5f, #feb47b);
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    .footer {
-      margin-top: 20px;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erfahrung — Nico Egerer</title>
+  <meta name="description" content="Berufliche Erfahrungen, Skills und Arbeitsweise von Nico Egerer, Fachinformatiker für Anwendungsentwicklung." />
+  <link rel="icon" href="../images/illustration.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🚧 Seite in Bearbeitung</h1>
-    <p>
-      Diese Website wird aktuell mit viel Sorgfalt und Liebe zum Detail neu gestaltet.
-      Bald erwartet dich hier ein modernes und einzigartiges Erlebnis.
-    </p>
-    <p>
-      Schau gerne in Kürze wieder vorbei – es lohnt sich!
-    </p>
 
-    <a href="https://nicoegerer.de" class="btn">Zur Hauptseite zurückkehren</a>
-
-    <div class="footer">
-      © 2026 Nico Egerer
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Nico</a>
+      <div class="nav-right">
+        <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
+        <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
+        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </div>
+  </header>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <nav class="sidebar" id="sidebar" aria-hidden="true">
+    <button class="sidebar-close" id="sidebar-close" aria-label="Menü schließen">✕</button>
+    <div class="sidebar-links">
+      <a href="/" class="sidebar-link-main">Home</a>
+      <a href="/about" class="sidebar-link-main">Über Mich</a>
+      <a href="/projects" class="sidebar-link-main">Projekte</a>
+      <a href="/JumpJump" class="sidebar-link-sub">JumpJump</a>
+      <a href="/work" class="sidebar-link-main active">Erfahrung</a>
+      <a href="/contact" class="sidebar-link-main">Kontakt</a>
+      <a href="/profiles" class="sidebar-link-main">Meine Profile</a>
+      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="sidebar-link-sub">GitHub</a>
+      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="sidebar-link-sub">LinkedIn</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="label white">Beruf &amp; Praxis</span>
+      <h1 class="page-hero-title">Meine <span class="page-hero-accent">Erfahrung</span></h1>
+      <p class="page-hero-sub">Praxiswissen aus Ausbildung, Projekten und echten Teams — hier stelle ich dar, was ich mitbringe.</p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE ENTRIES -->
+  <section class="exp-section">
+    <div class="exp-section-inner">
+      <div class="exp-header reveal">
+        <span class="label">Stationen</span>
+        <h2 class="section-heading dark">Beruflicher Werdegang</h2>
+      </div>
+
+      <div class="exp-entries">
+
+        <div class="exp-entry reveal">
+          <div class="exp-meta">
+            <span class="exp-year">2024 – heute</span>
+            <span class="exp-type">Ausbildung</span>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-title">Fachinformatiker Anwendungsentwicklung</h3>
+            <h4 class="exp-company">Reiser Simulation and Training GmbH</h4>
+            <p class="exp-desc">Ausbildung zum Fachinformatiker für Anwendungsentwicklung im Bereich professioneller Simulationssoftware. Mitarbeit an realen Softwareprojekten, agile Methoden, Code Reviews und Teamarbeit in einem professionellen Entwicklungsumfeld.</p>
+            <div class="exp-tags">
+              <span class="tag-dark">C++</span>
+              <span class="tag-dark">Git</span>
+              <span class="tag-dark">Agile</span>
+              <span class="tag-dark">Linux</span>
+              <span class="tag-dark">Simulation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-entry reveal reveal-delay-1">
+          <div class="exp-meta">
+            <span class="exp-year">2026</span>
+            <span class="exp-type">Projekt</span>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-title">Website &amp; JumpJump deployed</h3>
+            <h4 class="exp-company">Eigenentwicklung</h4>
+            <p class="exp-desc">Entwicklung und Deployment der persönlichen Portfolio-Website sowie des Browser-Spiels JumpJump. Vollständiger Stack von Design bis Deploy — Domain, Hosting, CI/CD.</p>
+            <div class="exp-tags">
+              <span class="tag-dark">HTML/CSS/JS</span>
+              <span class="tag-dark">C++</span>
+              <span class="tag-dark">WebAssembly</span>
+              <span class="tag-dark">Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-entry reveal reveal-delay-2">
+          <div class="exp-meta">
+            <span class="exp-year">2021</span>
+            <span class="exp-type">Praktikum</span>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-title">IT-Praktikum</h3>
+            <h4 class="exp-company">Erste Praxisstation</h4>
+            <p class="exp-desc">Erste Praxiserfahrung im IT-Umfeld — Grundlagen der Systemadministration, Netzwerktechnik und Helpdesk. Verstehen von professionellen IT-Abläufen in einem echten Unternehmensumfeld.</p>
+            <div class="exp-tags">
+              <span class="tag-dark">IT-Support</span>
+              <span class="tag-dark">Netzwerk</span>
+              <span class="tag-dark">Windows</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS DEEP DIVE -->
+  <section class="work-skills">
+    <div class="work-skills-inner">
+      <div class="work-skills-header reveal">
+        <span class="label white">Was ich kann</span>
+        <h2 class="section-heading white">Technische Fähigkeiten</h2>
+      </div>
+      <div class="work-skills-grid">
+
+        <div class="work-skill-col reveal reveal-delay-1">
+          <h4>Entwicklung</h4>
+          <ul class="work-skill-list">
+            <li>C++ (OOP, STL, Spieleentwicklung)</li>
+            <li>Python (Scripting, Automation, IoT)</li>
+            <li>HTML, CSS, JavaScript (Vanilla)</li>
+            <li>WebAssembly / Emscripten</li>
+            <li>Shell Scripting (Bash)</li>
+          </ul>
+        </div>
+
+        <div class="work-skill-col reveal reveal-delay-2">
+          <h4>Tools &amp; Methoden</h4>
+          <ul class="work-skill-list">
+            <li>Git / GitHub (Version Control)</li>
+            <li>Linux (Debian-basiert)</li>
+            <li>CMake / Build Systems</li>
+            <li>MQTT / Node-RED</li>
+            <li>Agile / Scrum Grundlagen</li>
+          </ul>
+        </div>
+
+        <div class="work-skill-col reveal reveal-delay-3">
+          <h4>Design &amp; Konzept</h4>
+          <ul class="work-skill-list">
+            <li>Figma (UI/UX Prototypen)</li>
+            <li>Responsive Web Design</li>
+            <li>Strukturierte Anforderungsanalyse</li>
+            <li>Technische Dokumentation</li>
+            <li>Projektplanung</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <div class="process-inner">
+      <div class="process-header reveal">
+        <span class="label">Wie ich arbeite</span>
+        <h2 class="section-heading dark">Meine Arbeitsweise</h2>
+        <p class="process-sub">Von der Idee bis zum fertigen Ergebnis — so gehe ich an neue Aufgaben heran.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="process-num">01</div>
+          <h4>Verstehen</h4>
+          <p>Zuerst analysiere ich das Problem gründlich. Was soll erreicht werden? Welche Anforderungen gibt es?</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-num">02</div>
+          <h4>Planen</h4>
+          <p>Ich strukturiere den Lösungsweg, schreibe Pseudocode oder erstelle Wireframes — je nach Aufgabe.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-num">03</div>
+          <h4>Umsetzen</h4>
+          <p>Sauber, dokumentiert und iterativ. Ich commitiere regelmäßig und teste laufend.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-num">04</div>
+          <h4>Liefern</h4>
+          <p>Funktionierendes Ergebnis, sauberer Code, vollständige Doku — so übergebe ich Projekte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="work-cta">
+    <div class="work-cta-inner reveal">
+      <span class="label white">Interesse?</span>
+      <h2 class="section-heading white">Lass uns zusammenarbeiten</h2>
+      <p>Ich bin offen für spannende Projekte, Kooperationen und neue Herausforderungen.</p>
+      <div class="work-cta-btns">
+        <a href="/contact" class="btn btn-outline">Kontakt aufnehmen</a>
+        <a href="/CV" class="btn btn-light">Lebenslauf</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <div class="footer-col"><a href="/" class="footer-main">Startseite</a></div>
+        <div class="footer-col">
+          <a href="/about" class="footer-main">Über Mich</a>
+          <a href="/CV" class="footer-sub">Lebenslauf</a>
+        </div>
+        <div class="footer-col"><a href="/projects" class="footer-main">Projekte</a></div>
+        <div class="footer-col"><a href="/contact" class="footer-main">Kontakt</a></div>
+        <div class="footer-col">
+          <a href="/profiles" class="footer-main">Meine Profile</a>
+          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-sub">GitHub</a>
+          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-sub">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="/" class="footer-logo">Nico</a>
+        <div class="footer-social">
+          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
+          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared.js"></script>
 </body>
 </html>
