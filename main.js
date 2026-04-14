@@ -136,72 +136,93 @@
       updateTimeline();
     });
   
-    // ---- EmailJS Konfiguration
-    const EMAILJS_PUBLIC_KEY  = '06H9FmKshm9bn70Us';    // z.B. "abc123xyz"
-    const EMAILJS_SERVICE_ID  = 'service_vu1n7hi';    // z.B. "service_abc"
-    const EMAILJS_TEMPLATE_ID = 'WebsiteMail';   // z.B. "template_xyz"
-    // ------------------------------------------------
-  
-    const emailjsScript = document.createElement('script');
-    emailjsScript.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-    emailjsScript.onload = () => {
-      if (window.emailjs) {
+    // ================================================================
+    //  EMAILJS — Kontaktformular
+    // ================================================================
+    
+    const EMAILJS_PUBLIC_KEY      = '06H9FmKshm9bn70Us';
+    const EMAILJS_SERVICE_ID      = 'service_gp9s55y';
+    const EMAILJS_TEMPLATE_NOTIFY = 'template_qrftc8c';   // Kontakt
+    const EMAILJS_TEMPLATE_REPLY  = 'template_2juygdo';   // Auto-Reply an Besucher
+    
+    let emailjsReady = false;
+    
+    (function loadEmailJS() {
+      const script  = document.createElement('script');
+      script.src    = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+      script.async  = true;
+      script.onload = () => {
         emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-      }
-    };
-    document.head.appendChild(emailjsScript);
-  
+        emailjsReady = true;
+      };
+      script.onerror = () => console.error('[EmailJS] Script konnte nicht geladen werden.');
+      document.head.appendChild(script);
+    })();
+    
     const contactForm = document.getElementById('contact-form');
     const cfSuccess   = document.getElementById('cf-success');
     const cfError     = document.getElementById('cf-error');
-  
+    
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-  
-        const submitBtn = contactForm.querySelector('.cf-submit');
+    
+        const submitBtn       = contactForm.querySelector('.cf-submit');
         submitBtn.disabled    = true;
-        submitBtn.textContent = 'Wird gesendet...';
+        submitBtn.textContent = 'Wird gesendet…';
         cfSuccess.style.display = 'none';
         cfError.style.display   = 'none';
-  
-        const name    = document.getElementById('cf-name').value.trim();
-        const email   = document.getElementById('cf-email').value.trim();
-        const message = document.getElementById('cf-msg').value.trim();
-  
-        // Fehlermeldung falls EmailJS noch nicht konfiguriert
-        if (EMAILJS_PUBLIC_KEY === 'DEIN_PUBLIC_KEY') {
-          console.warn('[EmailJS] Bitte Public Key, Service ID und Template ID in main.js eintragen.');
-          // Fallback: mailto öffnen
-          const subject = encodeURIComponent('Kontaktanfrage von ' + name);
-          const body    = encodeURIComponent('Name: ' + name + '\nE-Mail: ' + email + '\n\n' + message);
-          window.open('mailto:mail@nicoegerer.de?subject=' + subject + '&body=' + body);
-          cfSuccess.style.display = 'block';
-          contactForm.reset();
-          submitBtn.disabled    = false;
-          submitBtn.textContent = 'Absenden';
-          return;
-        }
-  
+    
+        // Warten bis EmailJS bereit ist (max. 8 s)
+        const waitForEmailJS = () => new Promise((resolve, reject) => {
+          if (emailjsReady) return resolve();
+          let elapsed = 0;
+          const interval = setInterval(() => {
+            elapsed += 100;
+            if (emailjsReady) { clearInterval(interval); resolve(); }
+            if (elapsed >= 8000) { clearInterval(interval); reject(new Error('EmailJS timeout')); }
+          }, 100);
+        });
+    
+        const nameVal    = document.getElementById('cf-name').value.trim();
+        const emailVal   = document.getElementById('cf-email').value.trim();
+        const messageVal = document.getElementById('cf-msg').value.trim();
+        const initials   = nameVal.split(' ').map(n => n[0] ?? '').join('').toUpperCase().slice(0, 2);
+        const timestamp  = new Date().toLocaleString('de-DE', {
+          day: '2-digit', month: '2-digit', year: 'numeric',
+          hour: '2-digit', minute: '2-digit'
+        });
+    
+        const templateParams = {
+          from_name:  nameVal,
+          from_email: emailVal,
+          reply_to:   emailVal,
+          to_name:    'Nico',
+          initials,
+          message:    messageVal,
+          time:       timestamp,
+        };
+    
         try {
-          await emailjs.send(
-            EMAILJS_SERVICE_ID,
-            EMAILJS_TEMPLATE_ID,
-            {
-              from_name:  name,
-              from_email: email,
-              message:    message,
-              to_email:   'mail@nicoegerer.de',
-            }
-          );
-  
+          await waitForEmailJS();
+    
+          // 1) Benachrichtig senden
+          await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_NOTIFY, templateParams);
+    
+          // 2) Auto-Reply an den Besucher
+          await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_REPLY,{
+            from_name: nameVal,
+            message: messageVal,
+            email: emailVal,
+            });
+    
           cfSuccess.style.display = 'block';
           contactForm.reset();
-  
+    
         } catch (err) {
           console.error('[EmailJS] Fehler:', err);
           cfError.style.display = 'block';
-  
+    
         } finally {
           submitBtn.disabled    = false;
           submitBtn.textContent = 'Absenden';
