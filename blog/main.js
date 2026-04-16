@@ -1,36 +1,41 @@
-/* blog/main.js — search + category filter */
+/* blog/main.js — Suche + Kategorie-Filter */
 document.addEventListener('DOMContentLoaded', () => {
-    const cards      = document.querySelectorAll('.blog-card');
-    const catBtns    = document.querySelectorAll('.cat-btn');
-    const searchInput= document.getElementById('blog-search');
-    const noResults  = document.getElementById('blog-no-results');
-  
-    let activeCat = 'all';
-  
-    function filterCards() {
-      const query = searchInput.value.toLowerCase().trim();
-      let visible = 0;
-      cards.forEach(card => {
-        const cats  = (card.dataset.cat || '').split(' ');
-        const title = (card.dataset.title || '').toLowerCase();
-        const text  = card.textContent.toLowerCase();
-        const catOk = activeCat === 'all' || cats.includes(activeCat);
-        const qOk   = !query || text.includes(query) || title.includes(query);
-        const show  = catOk && qOk;
-        card.classList.toggle('hidden', !show);
-        if (show) visible++;
-      });
-      noResults.style.display = visible === 0 ? 'block' : 'none';
+  const cards    = document.querySelectorAll('.blog-card');
+  const featured = document.querySelector('.blog-featured');
+  const catBtns  = document.querySelectorAll('.cat-btn');
+  const search   = document.getElementById('blog-search');
+  const noRes    = document.getElementById('blog-no-results');
+  let activeCat  = 'all';
+
+  function filter() {
+    const q = search.value.toLowerCase().trim();
+
+    // Featured
+    if (featured) {
+      const fCat   = (featured.dataset.cat || '').split(' ');
+      const fTitle = (featured.dataset.title || '').toLowerCase();
+      const fOk = (activeCat === 'all' || fCat.includes(activeCat)) && (!q || fTitle.includes(q));
+      featured.classList.toggle('hidden', !fOk);
     }
-  
-    catBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        catBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeCat = btn.dataset.cat;
-        filterCards();
-      });
+
+    let vis = 0;
+    cards.forEach(c => {
+      const cats  = (c.dataset.cat || '').split(' ');
+      const title = (c.dataset.title || '').toLowerCase();
+      const body  = c.textContent.toLowerCase();
+      const show  = (activeCat === 'all' || cats.includes(activeCat)) && (!q || body.includes(q) || title.includes(q));
+      c.classList.toggle('hidden', !show);
+      if (show) vis++;
     });
-  
-    searchInput.addEventListener('input', filterCards);
-  });
+    noRes.style.display = vis === 0 ? 'block' : 'none';
+  }
+
+  catBtns.forEach(btn => btn.addEventListener('click', () => {
+    catBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCat = btn.dataset.cat;
+    filter();
+  }));
+
+  search.addEventListener('input', filter);
+});

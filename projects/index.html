@@ -9,53 +9,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="../assets/css/shared.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">Nico</a>
-      <div class="nav-right">
-        <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-        <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-  <nav class="sidebar" id="sidebar" aria-hidden="true">
-    <button class="sidebar-close" id="sidebar-close" aria-label="Menü schließen">✕</button>
-    <div class="sidebar-links">
-      <a href="/" class="sidebar-link-main">Home</a>
-      <a href="/about" class="sidebar-link-main">Über Mich</a>
-      <a href="/projects" class="sidebar-link-main active">Projekte</a>
-      <a href="/JumpJump" class="sidebar-link-sub">JumpJump</a>
-      <a href="/work" class="sidebar-link-main">Erfahrung</a>
-      <a href="/contact" class="sidebar-link-main">Kontakt</a>
-      <a href="/profiles" class="sidebar-link-main">Meine Profile</a>
-      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="sidebar-link-sub">GitHub</a>
-      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="sidebar-link-sub">LinkedIn</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
   <section class="page-hero">
     <div class="page-hero-inner">
       <span class="label white">Portfolio</span>
       <h1 class="page-hero-title">Meine <span class="page-hero-accent">Projekte</span></h1>
-      <p class="page-hero-sub">Von C++ Games über Raspberry Pi Hardware bis hin zu Web-Apps — hier findest du alles, was ich gebaut habe.</p>
+      <p class="page-hero-sub">Von C++ Games über Raspberry Pi Hardware bis hin zu Web-Apps.</p>
     </div>
   </section>
 
-  <!-- FILTER + GRID -->
   <section class="projects-section">
     <div class="projects-section-inner">
 
+      <!-- FILTER -->
       <div class="filter-bar reveal">
         <button class="filter-btn active" data-filter="all">Alle</button>
         <button class="filter-btn" data-filter="cpp">C++</button>
@@ -64,129 +34,83 @@
         <button class="filter-btn" data-filter="hardware">Hardware</button>
       </div>
 
-      <div class="projects-grid" id="projects-grid">
+      <!-- GRID -->
+      <div class="proj-grid" id="proj-grid">
 
-        <!-- JumpJump -->
-        <article class="project-card" data-category="cpp">
-          <div class="project-img-wrap">
-            <img src="../images/game.jpg" alt="JumpJump Spiel" class="project-img" loading="lazy" />
-            <div class="project-overlay">
-              <a href="/JumpJump" class="btn btn-outline project-cta">Spielen</a>
-            </div>
+        <article class="proj-card reveal" data-cat="cpp">
+          <div class="proj-img-wrap">
+            <img src="../images/game.jpg" alt="JumpJump" class="proj-img" loading="lazy" />
+            <div class="proj-overlay"><a href="/JumpJump" class="btn btn-outline">Spielen</a></div>
           </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag">C++</span>
-              <span class="tag">WASM</span>
-              <span class="tag">Shell</span>
-            </div>
-            <h3 class="project-title">JumpJump</h3>
-            <p class="project-text">Selbstentwickelter Platformer in C++, kompiliert mit Emscripten zu WebAssembly und direkt im Browser spielbar. Eigene Spieleengine, Tilemap-System und Sprungphysik.</p>
-            <a href="/JumpJump" class="project-link">Jetzt spielen →</a>
+          <div class="proj-info">
+            <div class="proj-tags"><span class="tag">C++</span><span class="tag">WASM</span><span class="tag">Shell</span></div>
+            <h3 class="proj-title">JumpJump</h3>
+            <p class="proj-text">Selbstentwickelter Platformer in C++, kompiliert mit Emscripten zu WebAssembly und direkt im Browser spielbar.</p>
+            <a href="/JumpJump" class="proj-link">Jetzt spielen →</a>
           </div>
         </article>
 
-        <!-- Raspberry Pi -->
-        <article class="project-card" data-category="python hardware">
-          <div class="project-img-wrap">
-            <img src="../images/ampel.jpg" alt="Raspberry Pi Kreuzung" class="project-img" loading="lazy" />
-            <div class="project-overlay">
-              <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="btn btn-outline project-cta">GitHub</a>
-            </div>
+        <article class="proj-card reveal reveal-delay-1" data-cat="python hardware">
+          <div class="proj-img-wrap">
+            <img src="../images/ampel.jpg" alt="Raspberry Pi" class="proj-img" loading="lazy" />
+            <div class="proj-overlay"><a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a></div>
           </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">MQTT</span>
-              <span class="tag">Node-RED</span>
-              <span class="tag">Raspberry Pi</span>
-            </div>
-            <h3 class="project-title">Raspberry Pi Projekte</h3>
-            <p class="project-text">Kreuzungssimulation mit Ampelsteuerung, Luftfeuchtigkeits- und Temperaturmesser mit Dashboard. Kommunikation via MQTT und Visualisierung in Node-RED.</p>
-            <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="project-link">GitHub ansehen →</a>
+          <div class="proj-info">
+            <div class="proj-tags"><span class="tag">Python</span><span class="tag">MQTT</span><span class="tag">Node-RED</span><span class="tag">RPi</span></div>
+            <h3 class="proj-title">Raspberry Pi Projekte</h3>
+            <p class="proj-text">Kreuzungssimulation mit Ampelsteuerung, Luftfeuchtigkeits- und Temperaturmesser mit Node-RED Dashboard.</p>
+            <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
           </div>
         </article>
 
-        <!-- Website -->
-        <article class="project-card" data-category="web">
-          <div class="project-img-wrap">
-            <img src="../images/website.jpg" alt="Meine Website" class="project-img" loading="lazy" />
-            <div class="project-overlay">
-              <a href="/" class="btn btn-outline project-cta">Ansehen</a>
-            </div>
+        <article class="proj-card reveal reveal-delay-2" data-cat="web">
+          <div class="proj-img-wrap">
+            <img src="../images/website.jpg" alt="Website" class="proj-img" loading="lazy" />
+            <div class="proj-overlay"><a href="/" class="btn btn-outline">Ansehen</a></div>
           </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag">HTML/CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Figma</span>
-            </div>
-            <h3 class="project-title">Persönliche Website</h3>
-            <p class="project-text">Diese Website — strukturiert wie ein echtes Kundenprojekt. Design in Figma, Umsetzung in reinem HTML/CSS/JS ohne Framework. Vollständig responsiv und performant.</p>
-            <a href="/" class="project-link">Live ansehen →</a>
+          <div class="proj-info">
+            <div class="proj-tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Figma</span></div>
+            <h3 class="proj-title">Persönliche Website</h3>
+            <p class="proj-text">Diese Website — von Design in Figma bis Deployment. Vollständig responsiv, ohne Framework, mit eigenem Design-System.</p>
+            <a href="/" class="proj-link">Live ansehen →</a>
           </div>
         </article>
 
-        <!-- C++ Engine -->
-        <article class="project-card" data-category="cpp">
-          <div class="project-img-wrap">
-            <div class="project-img project-img-placeholder">
-              <span>⚙️</span>
-            </div>
-            <div class="project-overlay">
-              <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="btn btn-outline project-cta">GitHub</a>
-            </div>
+        <article class="proj-card reveal" data-cat="cpp">
+          <div class="proj-img-wrap">
+            <div class="proj-img proj-placeholder">⚙️</div>
+            <div class="proj-overlay"><a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a></div>
           </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag">C++</span>
-              <span class="tag">CMake</span>
-              <span class="tag">SDL2</span>
-            </div>
-            <h3 class="project-title">C++ Gameloop Engine</h3>
-            <p class="project-text">Experimentelle 2D-Spiele­engine mit eigenem Gameloop, Entity-System und Renderer. Basis für JumpJump und zukünftige Projekte.</p>
-            <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="project-link">Code ansehen →</a>
+          <div class="proj-info">
+            <div class="proj-tags"><span class="tag">C++</span><span class="tag">CMake</span><span class="tag">SDL2</span></div>
+            <h3 class="proj-title">C++ Gameloop Engine</h3>
+            <p class="proj-text">Experimentelle 2D-Spieleengine mit eigenem Entity-System und Renderer. Basis für JumpJump.</p>
+            <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="proj-link">Code ansehen →</a>
           </div>
         </article>
 
-        <!-- Automation Scripts -->
-        <article class="project-card" data-category="python">
-          <div class="project-img-wrap">
-            <div class="project-img project-img-placeholder">
-              <span>🐍</span>
-            </div>
-            <div class="project-overlay">
-              <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="btn btn-outline project-cta">GitHub</a>
-            </div>
+        <article class="proj-card reveal reveal-delay-1" data-cat="python">
+          <div class="proj-img-wrap">
+            <div class="proj-img proj-placeholder">🐍</div>
+            <div class="proj-overlay"><a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a></div>
           </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Automation</span>
-              <span class="tag">CLI</span>
-            </div>
-            <h3 class="project-title">Python Automatisierungen</h3>
-            <p class="project-text">Sammlung nützlicher Skripte für Automatisierungen, Dateimanagement und kleine CLI-Tools. Entstanden aus dem Alltag der Ausbildung.</p>
-            <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+          <div class="proj-info">
+            <div class="proj-tags"><span class="tag">Python</span><span class="tag">Automation</span><span class="tag">CLI</span></div>
+            <h3 class="proj-title">Python Automatisierungen</h3>
+            <p class="proj-text">Sammlung nützlicher Skripte für Automatisierungen, Dateimanagement und kleine CLI-Tools.</p>
+            <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
           </div>
         </article>
 
-        <!-- Zukünftig -->
-        <article class="project-card project-card-coming" data-category="cpp">
-          <div class="project-img-wrap">
-            <div class="project-img project-img-placeholder coming">
-              <span>🚀</span>
-            </div>
+        <article class="proj-card proj-coming reveal reveal-delay-2" data-cat="cpp">
+          <div class="proj-img-wrap">
+            <div class="proj-img proj-placeholder coming">🚀</div>
           </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Unreal Engine</span>
-              <span class="tag">Co-op</span>
-            </div>
-            <h3 class="project-title">Nächstes Projekt — TBA</h3>
-            <p class="project-text">Komplexeres Spiel mit C++ und Unreal Engine. Co-op-Modus und erweiterbare Levels geplant. In aktiver Entwicklung.</p>
-            <span class="project-badge">In Arbeit</span>
+          <div class="proj-info">
+            <div class="proj-tags"><span class="tag">C++</span><span class="tag">Unreal</span><span class="tag">Co-op</span></div>
+            <h3 class="proj-title">Nächstes Projekt — TBA</h3>
+            <p class="proj-text">Komplexeres Spiel mit Unreal Engine. Co-op-Modus geplant. In aktiver Entwicklung.</p>
+            <span class="proj-badge">In Arbeit</span>
           </div>
         </article>
 
@@ -195,65 +119,25 @@
   </section>
 
   <!-- STATS -->
-  <section class="proj-stats">
+  <section class="proj-stats-section">
     <div class="proj-stats-inner">
-      <div class="stat reveal">
-        <span class="stat-num">5+</span>
-        <span class="stat-label">Fertige Projekte</span>
-      </div>
-      <div class="stat reveal reveal-delay-1">
-        <span class="stat-num">4</span>
-        <span class="stat-label">Sprachen eingesetzt</span>
-      </div>
-      <div class="stat reveal reveal-delay-2">
-        <span class="stat-num">2+</span>
-        <span class="stat-label">Jahre Erfahrung</span>
-      </div>
-      <div class="stat reveal reveal-delay-3">
-        <span class="stat-num">1</span>
-        <span class="stat-label">Live-Spiel im Browser</span>
-      </div>
+      <div class="stat reveal"><span class="stat-num">5+</span><span class="stat-label">Fertige Projekte</span></div>
+      <div class="stat reveal reveal-delay-1"><span class="stat-num">4</span><span class="stat-label">Sprachen eingesetzt</span></div>
+      <div class="stat reveal reveal-delay-2"><span class="stat-num">2+</span><span class="stat-label">Jahre Erfahrung</span></div>
+      <div class="stat reveal reveal-delay-3"><span class="stat-num">1</span><span class="stat-label">Live-Spiel im Browser</span></div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="projects-cta">
-    <div class="projects-cta-inner reveal">
+  <section class="proj-cta">
+    <div class="proj-cta-inner reveal">
       <span class="label white">Mehr auf GitHub</span>
       <h2 class="section-heading white">Alle Repositories ansehen</h2>
-      <p>Auf meinem GitHub findest du alle öffentlichen Projekte, Code-Snippets und Experimente.</p>
+      <p>Öffentliche Projekte, Snippets und Experimente — alles auf GitHub.</p>
       <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="btn btn-outline">GitHub öffnen</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-links">
-        <div class="footer-col"><a href="/" class="footer-main">Startseite</a></div>
-        <div class="footer-col">
-          <a href="/about" class="footer-main">Über Mich</a>
-          <a href="/CV" class="footer-sub">Lebenslauf</a>
-        </div>
-        <div class="footer-col"><a href="/projects" class="footer-main">Projekte</a></div>
-        <div class="footer-col"><a href="/contact" class="footer-main">Kontakt</a></div>
-        <div class="footer-col">
-          <a href="/profiles" class="footer-main">Meine Profile</a>
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-sub">GitHub</a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-sub">LinkedIn</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <a href="/" class="footer-logo">Nico</a>
-        <div class="footer-social">
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../shared.js"></script>
+  <script src="../assets/js/components.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

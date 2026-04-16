@@ -4,46 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog — Nico Egerer</title>
-  <meta name="description" content="Nicos Blog — Artikel über Softwareentwicklung, Projekte, Lernen und Technik." />
+  <meta name="description" content="Nicos Blog — Artikel über Softwareentwicklung, Projekte und Technik." />
   <link rel="icon" href="../images/illustration.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="../assets/css/shared.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">Nico</a>
-      <div class="nav-right">
-        <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-        <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-  <nav class="sidebar" id="sidebar" aria-hidden="true">
-    <button class="sidebar-close" id="sidebar-close" aria-label="Menü schließen">✕</button>
-    <div class="sidebar-links">
-      <a href="/" class="sidebar-link-main">Home</a>
-      <a href="/about" class="sidebar-link-main">Über Mich</a>
-      <a href="/projects" class="sidebar-link-main">Projekte</a>
-      <a href="/JumpJump" class="sidebar-link-sub">JumpJump</a>
-      <a href="/work" class="sidebar-link-main">Erfahrung</a>
-      <a href="/contact" class="sidebar-link-main">Kontakt</a>
-      <a href="/profiles" class="sidebar-link-main">Meine Profile</a>
-      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="sidebar-link-sub">GitHub</a>
-      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="sidebar-link-sub">LinkedIn</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
   <section class="page-hero">
     <div class="page-hero-inner">
       <span class="label white">Gedanken &amp; Updates</span>
@@ -52,15 +22,14 @@
     </div>
   </section>
 
-  <!-- BLOG SECTION -->
   <section class="blog-section">
     <div class="blog-inner">
 
-      <!-- SEARCH + FILTER -->
+      <!-- TOOLBAR -->
       <div class="blog-toolbar reveal">
         <div class="blog-search-wrap">
-          <input type="search" id="blog-search" class="blog-search" placeholder="Artikel suchen…" aria-label="Blog durchsuchen" />
           <span class="search-icon">🔍</span>
+          <input type="search" id="blog-search" class="blog-search" placeholder="Artikel suchen…" aria-label="Blog durchsuchen" />
         </div>
         <div class="blog-cats">
           <button class="cat-btn active" data-cat="all">Alle</button>
@@ -71,16 +40,16 @@
         </div>
       </div>
 
-      <!-- FEATURED POST -->
-      <div class="blog-featured reveal">
+      <!-- FEATURED -->
+      <article class="blog-featured reveal" data-cat="project" data-title="JumpJump im Browser WebAssembly C++">
         <div class="blog-featured-img">
           <img src="../images/game.jpg" alt="JumpJump" loading="lazy" />
-          <span class="blog-cat-badge">Projekt</span>
+          <span class="blog-badge">Projekt</span>
         </div>
         <div class="blog-featured-text">
           <span class="blog-meta">14. April 2026 · 5 min Lesezeit</span>
           <h2 class="blog-featured-title">JumpJump im Browser — Wie ich C++ zu WebAssembly kompiliert habe</h2>
-          <p class="blog-featured-desc">Einen Platformer in C++ entwickeln ist eine Sache. Ihn über WebAssembly im Browser spielbar zu machen, eine ganz andere. In diesem Artikel beschreibe ich den Weg von der lokalen Exe zur Web-App.</p>
+          <p class="blog-featured-desc">Einen Platformer in C++ entwickeln ist eine Sache. Ihn über WebAssembly im Browser spielbar zu machen, eine ganz andere. Hier beschreibe ich den Weg von der lokalen Exe zur Web-App.</p>
           <div class="blog-featured-footer">
             <div class="blog-tags-wrap">
               <span class="blog-tag">C++</span>
@@ -90,15 +59,15 @@
             <a href="#" class="blog-read-link">Weiterlesen →</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <!-- GRID POSTS -->
+      <!-- GRID -->
       <div class="blog-grid" id="blog-grid">
 
         <article class="blog-card" data-cat="dev" data-title="Warum ich Vanilla JavaScript bevorzuge">
           <div class="blog-card-img-wrap">
             <img src="../images/website.jpg" alt="Website" loading="lazy" class="blog-card-img" />
-            <span class="blog-cat-badge">Entwicklung</span>
+            <span class="blog-badge">Entwicklung</span>
           </div>
           <div class="blog-card-body">
             <span class="blog-meta">28. März 2026 · 4 min</span>
@@ -108,49 +77,49 @@
           </div>
         </article>
 
-        <article class="blog-card" data-cat="learn" data-title="3 Monate Ausbildung">
+        <article class="blog-card" data-cat="learn" data-title="3 Monate Ausbildung Was ich gelernt habe">
           <div class="blog-card-img-wrap">
-            <div class="blog-card-img blog-card-img-placeholder">💡</div>
-            <span class="blog-cat-badge cat-learn">Lernen</span>
+            <div class="blog-card-img blog-placeholder">💡</div>
+            <span class="blog-badge badge-learn">Lernen</span>
           </div>
           <div class="blog-card-body">
             <span class="blog-meta">10. Jan. 2026 · 6 min</span>
             <h3 class="blog-card-title">3 Monate Ausbildung — Was ich gelernt habe</h3>
-            <p class="blog-card-excerpt">Ein ehrlicher Rückblick auf die ersten Monate bei Reiser Simulation: Erwartungen vs. Realität.</p>
+            <p class="blog-card-excerpt">Ein ehrlicher Rückblick auf die ersten Monate bei Reiser Simulation.</p>
             <a href="#" class="blog-read-link">Lesen →</a>
           </div>
         </article>
 
-        <article class="blog-card" data-cat="tech" data-title="Raspberry Pi Kreuzung">
+        <article class="blog-card" data-cat="tech" data-title="Raspberry Pi Kreuzungssimulation MQTT">
           <div class="blog-card-img-wrap">
             <img src="../images/ampel.jpg" alt="Raspberry Pi" loading="lazy" class="blog-card-img" />
-            <span class="blog-cat-badge cat-tech">Technik</span>
+            <span class="blog-badge badge-tech">Technik</span>
           </div>
           <div class="blog-card-body">
             <span class="blog-meta">5. Nov. 2025 · 7 min</span>
             <h3 class="blog-card-title">Raspberry Pi Kreuzungssimulation mit MQTT</h3>
-            <p class="blog-card-excerpt">Wie ich eine vollständige Kreuzungssimulation mit Ampeln, Python und MQTT gebaut habe.</p>
+            <p class="blog-card-excerpt">Wie ich eine vollständige Kreuzungssimulation mit Python und MQTT gebaut habe.</p>
             <a href="#" class="blog-read-link">Lesen →</a>
           </div>
         </article>
 
-        <article class="blog-card" data-cat="dev" data-title="C++ Gameloop">
+        <article class="blog-card" data-cat="dev" data-title="Mein erster eigener Gameloop C++">
           <div class="blog-card-img-wrap">
-            <div class="blog-card-img blog-card-img-placeholder">⚙️</div>
-            <span class="blog-cat-badge">Entwicklung</span>
+            <div class="blog-card-img blog-placeholder">⚙️</div>
+            <span class="blog-badge">Entwicklung</span>
           </div>
           <div class="blog-card-body">
             <span class="blog-meta">20. Sept. 2025 · 8 min</span>
             <h3 class="blog-card-title">Mein erster eigener Gameloop in C++</h3>
-            <p class="blog-card-excerpt">Wie ein Gameloop funktioniert, wie ich meinen eigenen gebaut habe und was ich dabei falsch gemacht habe.</p>
+            <p class="blog-card-excerpt">Wie ein Gameloop funktioniert und was ich beim Bauen meines eigenen falsch gemacht habe.</p>
             <a href="#" class="blog-read-link">Lesen →</a>
           </div>
         </article>
 
-        <article class="blog-card" data-cat="project" data-title="Website Figma">
+        <article class="blog-card" data-cat="project" data-title="Von Figma zur Website Design Prozess">
           <div class="blog-card-img-wrap">
-            <div class="blog-card-img blog-card-img-placeholder">🎨</div>
-            <span class="blog-cat-badge cat-project">Projekt</span>
+            <div class="blog-card-img blog-placeholder">🎨</div>
+            <span class="blog-badge badge-project">Projekt</span>
           </div>
           <div class="blog-card-body">
             <span class="blog-meta">3. Aug. 2025 · 5 min</span>
@@ -160,14 +129,14 @@
           </div>
         </article>
 
-        <article class="blog-card" data-cat="learn" data-title="Linux Basics">
+        <article class="blog-card" data-cat="learn" data-title="Linux als tägliches Werkzeug Basics">
           <div class="blog-card-img-wrap">
-            <div class="blog-card-img blog-card-img-placeholder">🐧</div>
-            <span class="blog-cat-badge cat-learn">Lernen</span>
+            <div class="blog-card-img blog-placeholder">🐧</div>
+            <span class="blog-badge badge-learn">Lernen</span>
           </div>
           <div class="blog-card-body">
             <span class="blog-meta">12. Jun. 2025 · 4 min</span>
-            <h3 class="blog-card-title">Linux als tägliches Werkzeug — Meine Basics</h3>
+            <h3 class="blog-card-title">Linux als tägliches Werkzeug</h3>
             <p class="blog-card-excerpt">Terminal, Bash, Dateisystem — die Linux-Kenntnisse, die ich jeden Tag einsetze.</p>
             <a href="#" class="blog-read-link">Lesen →</a>
           </div>
@@ -175,42 +144,11 @@
 
       </div>
 
-      <!-- NO RESULTS -->
-      <div class="blog-no-results" id="blog-no-results" style="display:none;">
-        <p>Keine Artikel gefunden. Versuche einen anderen Suchbegriff.</p>
-      </div>
-
+      <p class="blog-no-results" id="blog-no-results" style="display:none;">Keine Artikel gefunden.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-links">
-        <div class="footer-col"><a href="/" class="footer-main">Startseite</a></div>
-        <div class="footer-col">
-          <a href="/about" class="footer-main">Über Mich</a>
-          <a href="/CV" class="footer-sub">Lebenslauf</a>
-        </div>
-        <div class="footer-col"><a href="/projects" class="footer-main">Projekte</a></div>
-        <div class="footer-col"><a href="/contact" class="footer-main">Kontakt</a></div>
-        <div class="footer-col">
-          <a href="/profiles" class="footer-main">Meine Profile</a>
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-sub">GitHub</a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-sub">LinkedIn</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <a href="/" class="footer-logo">Nico</a>
-        <div class="footer-social">
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../shared.js"></script>
+  <script src="../assets/js/components.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

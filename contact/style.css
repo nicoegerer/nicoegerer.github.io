@@ -1,221 +1,77 @@
-/* ================================================================
-   contact/style.css
-   ================================================================ */
+/* contact/style.css */
 
-/* CONTACT SECTION */
-.contact-section {
-    background: var(--beige);
-    padding: var(--gap-xl) var(--gap-m);
-  }
-  .contact-section-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: var(--gap-l);
-    align-items: start;
-  }
-  .contact-subline-dark {
-    color: #777;
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
-  
-  /* FORM OVERRIDES (dark bg → light bg) */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-  .cf-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .cf-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-  .cf-field label {
-    color: #555;
-    font-size: 0.88rem;
-    font-weight: 500;
-  }
-  .cf-input {
-    background: var(--weiss);
-    border: 1.5px solid #ddd;
-    border-radius: var(--r-s);
-    padding: 0.8rem 1rem;
-    font-size: 0.95rem;
-    font-family: var(--font-base);
-    color: #222;
-    width: 100%;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .cf-input::placeholder { color: #bbb; }
-  .cf-input:focus { border-color: var(--blau); }
-  .cf-select { cursor: pointer; }
-  .cf-textarea {
-    height: 160px;
-    resize: vertical;
-  }
-  .cf-submit { margin-top: 0.8rem; align-self: flex-start; }
-  .cf-success {
-    display: none;
-    margin-top: 1rem;
-    padding: 0.9rem 1.2rem;
-    border-radius: var(--r-s);
-    font-size: 0.95rem;
-    background: rgba(80,200,120,0.1);
-    color: #3a9d5c;
-    border: 1px solid #3a9d5c44;
-  }
-  .cf-error {
-    display: none;
-    margin-top: 1rem;
-    padding: 0.9rem 1.2rem;
-    border-radius: var(--r-s);
-    font-size: 0.95rem;
-    background: rgba(220,80,80,0.1);
-    color: #c04040;
-    border: 1px solid #c0404044;
-  }
-  
-  /* CONTACT INFO */
-  .contact-info-title {
-    font-family: var(--font-serif);
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #111;
-    margin-bottom: 0.5rem;
-  }
-  .contact-info-sub {
-    color: #777;
-    font-size: 0.92rem;
-    margin-bottom: 1.8rem;
-  }
-  .contact-channels {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-bottom: 2rem;
-  }
-  .contact-channel {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: var(--weiss);
-    border-radius: var(--r);
-    padding: 1rem 1.3rem;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1.5px solid transparent;
-  }
-  .contact-channel:hover {
-    transform: translateX(4px);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-    border-color: var(--blau);
-  }
-  .channel-icon { font-size: 1.5rem; }
-  .channel-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-  .channel-label {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #aaa;
-    font-family: var(--font-rund);
-  }
-  .channel-value {
-    font-size: 0.92rem;
-    color: #222;
-    font-weight: 500;
-  }
-  
-  .response-badge {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: rgba(152,213,235,0.12);
-    border: 1.5px solid rgba(152,213,235,0.35);
-    border-radius: var(--r);
-    padding: 1rem 1.3rem;
-  }
-  .response-icon { font-size: 1.5rem; }
-  .response-badge strong { color: #111; font-size: 0.95rem; display: block; margin-bottom: 0.2rem; }
-  .response-badge p { color: #777; font-size: 0.85rem; margin: 0; }
-  
-  /* FAQ */
-  .faq-section {
-    background: var(--dunkel);
-    padding: var(--gap-xl) var(--gap-m);
-  }
-  .faq-inner {
-    max-width: 760px;
-    margin: 0 auto;
-  }
-  .faq-header {
-    text-align: center;
-    margin-bottom: var(--gap-l);
-  }
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-  .faq-item {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--r-s);
-    overflow: hidden;
-  }
-  .faq-q {
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    color: var(--weiss);
-    font-size: 1rem;
-    font-family: var(--font-base);
-    font-weight: 500;
-    padding: 1.2rem 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.2s;
-  }
-  .faq-q::after {
-    content: '+';
-    font-size: 1.3rem;
-    color: var(--blau);
-    transition: transform 0.3s;
-  }
-  .faq-q[aria-expanded="true"]::after { transform: rotate(45deg); }
-  .faq-q:hover { background: rgba(255,255,255,0.04); }
-  .faq-a {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-    padding: 0 1.5rem;
-  }
-  .faq-a.open {
-    max-height: 200px;
-    padding: 0 1.5rem 1.2rem;
-  }
-  .faq-a p {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.93rem;
-    line-height: 1.7;
-  }
-  
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .contact-section-inner { grid-template-columns: 1fr; }
-    .cf-row { grid-template-columns: 1fr; }
-  }
+.contact-section { background: var(--beige); padding: var(--gap-xl) var(--gap-m); }
+.contact-section-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--gap-l); align-items: start;
+}
+.contact-subline-dark { color: #777; font-size: 0.95rem; margin-bottom: 2rem; }
+
+.contact-form-ext { display: flex; flex-direction: column; gap: 0.7rem; }
+.cf-row   { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cf-field { display: flex; flex-direction: column; gap: 0.35rem; }
+.cf-field label { color: #555; font-size: 0.88rem; font-weight: 500; }
+.cf-input-light {
+  background: var(--weiss); border: 1.5px solid #ddd; border-radius: var(--r-s);
+  padding: 0.8rem 1rem; font-size: 0.95rem; font-family: var(--font-base);
+  color: #222; width: 100%; outline: none; transition: border-color 0.2s;
+}
+.cf-input-light::placeholder { color: #bbb; }
+.cf-input-light:focus { border-color: var(--blau); }
+.cf-textarea-light { height: 160px; resize: vertical; }
+.cf-submit { margin-top: 0.5rem; align-self: flex-start; }
+
+/* Light-bg success/error overrides */
+.cf-success { background: rgba(80,200,120,0.1); color: #3a9d5c; border: 1px solid #3a9d5c44; }
+.cf-error   { background: rgba(220,80,80,0.1);  color: #c04040; border: 1px solid #c0404044; }
+
+.contact-info-title { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; color: #111; margin-bottom: 0.5rem; }
+.contact-info-sub   { color: #777; font-size: 0.92rem; margin-bottom: 1.8rem; }
+.contact-channels   { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem; }
+
+.contact-channel {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--weiss); border-radius: var(--r);
+  padding: 1rem 1.3rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border: 1.5px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.contact-channel:hover { transform: translateX(4px); border-color: var(--blau); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+.channel-icon { font-size: 1.5rem; }
+.channel-text { display: flex; flex-direction: column; gap: 0.1rem; }
+.channel-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #aaa; font-family: var(--font-rund); }
+.channel-value { font-size: 0.92rem; color: #222; font-weight: 500; }
+
+.response-badge {
+  display: flex; align-items: center; gap: 1rem;
+  background: rgba(152,213,235,0.1); border: 1.5px solid rgba(152,213,235,0.3);
+  border-radius: var(--r); padding: 1rem 1.3rem; font-size: 1.3rem;
+}
+.response-badge strong { color: #111; font-size: 0.95rem; display: block; margin-bottom: 0.15rem; }
+.response-badge p { color: #777; font-size: 0.85rem; margin: 0; }
+
+/* FAQ */
+.faq-section { background: var(--dunkel); padding: var(--gap-xl) var(--gap-m); }
+.faq-inner   { max-width: 760px; margin: 0 auto; }
+.faq-header  { text-align: center; margin-bottom: var(--gap-l); }
+.faq-list    { display: flex; flex-direction: column; gap: 0.6rem; }
+.faq-item    { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--r-s); overflow: hidden; }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none;
+  color: var(--weiss); font-size: 1rem; font-family: var(--font-base); font-weight: 500;
+  padding: 1.2rem 1.5rem; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.2s;
+}
+.faq-q::after { content: '+'; font-size: 1.3rem; color: var(--blau); transition: transform 0.3s; }
+.faq-q[aria-expanded="true"]::after { transform: rotate(45deg); }
+.faq-q:hover { background: rgba(255,255,255,0.04); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 1.5rem; }
+.faq-a.open  { max-height: 200px; padding: 0 1.5rem 1.2rem; }
+.faq-a p { color: rgba(255,255,255,0.6); font-size: 0.93rem; line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .contact-section-inner { grid-template-columns: 1fr; }
+  .cf-row { grid-template-columns: 1fr; }
+}

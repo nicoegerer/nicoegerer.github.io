@@ -9,48 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/shared.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ================================================
-       NAVIGATION
-       ================================================ -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-
-      <a href="/" class="nav-logo">Nico</a>
-
-      <div class="nav-right">
-        <a href="https://github.com/nicoegerer"
-           target="_blank" rel="noopener" aria-label="GitHub"
-           class="nav-icon github-icon"></a>
-        <a href="https://www.linkedin.com/in/nico-egerer/"
-           target="_blank" rel="noopener" aria-label="LinkedIn"
-           class="nav-icon linkedin-icon"></a>
-        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-  <nav class="sidebar" id="sidebar" aria-hidden="true">
-    <button class="sidebar-close" id="sidebar-close" aria-label="Menü schließen">✕</button>
-    <div class="sidebar-links">
-      <a href="/" class="sidebar-link-main">Home</a>
-      <a href="/about" class="sidebar-link-main">Über Mich</a>
-      <a href="/projects" class="sidebar-link-main">Projekte</a>
-      <a href="/JumpJump" class="sidebar-link-sub">JumpJump</a>
-      <a href="/work" class="sidebar-link-main">Erfahrung</a>
-      <a href="/contact" class="sidebar-link-main">Kontakt</a>
-      <a href="/profiles" class="sidebar-link-main">Meine Profile</a>
-      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="sidebar-link-sub">GitHub</a>
-      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="sidebar-link-sub">LinkedIn</a>
-    </div>
-  </nav>
+  <!-- NAV + SIDEBAR werden von assets/js/components.js injiziert -->
 
   <!-- ================================================
        SEITE 1 — HERO
@@ -177,6 +141,8 @@
       <div class="tl-line-col">
         <div class="tl-track">
           <div class="tl-fill" id="tl-fill"></div>
+          <!-- Dots werden von main.js generiert -->
+          <div class="tl-dots-wrap" id="tl-dots-wrap"></div>
         </div>
       </div>
 
@@ -197,22 +163,15 @@
         </div>
 
         <div class="tl-card" data-tl="2">
-          <span class="tl-year">2024</span>
-          <h3 class="tl-title">Eigene Spiele mit Raylib</h3>
-          <p class="tl-text">Erstellung meiner ersten eigenen Spiele mit Raylib in&nbsp;C++.</p>
+          <span class="tl-year">2023</span>
+          <h3 class="tl-title">Erste eigene Projekte</h3>
+          <p class="tl-text">C++, Raspberry Pi und die ersten eigenen Spiele und Scripts.</p>
           <a href="/work" class="tl-more">mehr →</a>
         </div>
 
         <div class="tl-card" data-tl="3">
-          <span class="tl-year">2024</span>
-          <h3 class="tl-title">C++ Kurse</h3>
-          <p class="tl-text">C++ Kurse über Udemy absolviert und Grundlagen vertieft.</p>
-          <a href="/work" class="tl-more">mehr →</a>
-        </div>
-
-        <div class="tl-card" data-tl="4">
-          <span class="tl-year">2023</span>
-          <h3 class="tl-title">IT Praktikum bei EVIA</h3>
+          <span class="tl-year">2021</span>
+          <h3 class="tl-title">IT-Praktikum</h3>
           <p class="tl-text">Erste Praxiserfahrung im IT-Umfeld gesammelt.</p>
           <a href="/work" class="tl-more">mehr →</a>
         </div>
@@ -366,47 +325,9 @@
     </div>
   </section>
 
+  <!-- FOOTER wird von assets/js/components.js injiziert -->
 
-  <!-- ================================================
-       FOOTER
-       ================================================ -->
-  <footer class="footer">
-    <div class="footer-inner">
-
-      <div class="footer-links">
-        <div class="footer-col">
-          <a href="/" class="footer-main">Startseite</a>
-        </div>
-        <div class="footer-col">
-          <a href="/about" class="footer-main">Über Mich</a>
-          <a href="/CV" class="footer-sub">Lebenslauf</a>
-        </div>
-        <div class="footer-col">
-          <a href="/projects" class="footer-main">Projekte</a>
-        </div>
-        <div class="footer-col">
-          <a href="/contact" class="footer-main">Kontakt</a>
-        </div>
-        <div class="footer-col">
-          <a href="/profiles" class="footer-main">Meine Profile</a>
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-sub">GitHub</a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-sub">LinkedIn</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <a href="/" class="footer-logo">Nico</a>
-        <div class="footer-social">
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener"
-             aria-label="GitHub" class="nav-icon github-icon"></a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener"
-             aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
+  <script src="assets/js/components.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

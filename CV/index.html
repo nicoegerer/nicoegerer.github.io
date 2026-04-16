@@ -4,54 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lebenslauf — Nico Egerer</title>
-  <meta name="description" content="Der Lebenslauf von Nico Egerer — Ausbildung, Erfahrung, Skills und mehr." />
+  <meta name="description" content="Der Lebenslauf von Nico Egerer — Ausbildung, Erfahrung und Skills." />
   <link rel="icon" href="../images/illustration.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="../assets/css/shared.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">Nico</a>
-      <div class="nav-right">
-        <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-        <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-  <nav class="sidebar" id="sidebar" aria-hidden="true">
-    <button class="sidebar-close" id="sidebar-close" aria-label="Menü schließen">✕</button>
-    <div class="sidebar-links">
-      <a href="/" class="sidebar-link-main">Home</a>
-      <a href="/about" class="sidebar-link-main">Über Mich</a>
-      <a href="/projects" class="sidebar-link-main">Projekte</a>
-      <a href="/JumpJump" class="sidebar-link-sub">JumpJump</a>
-      <a href="/work" class="sidebar-link-main">Erfahrung</a>
-      <a href="/contact" class="sidebar-link-main">Kontakt</a>
-      <a href="/profiles" class="sidebar-link-main">Meine Profile</a>
-      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="sidebar-link-sub">GitHub</a>
-      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="sidebar-link-sub">LinkedIn</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
   <section class="page-hero cv-hero">
     <div class="page-hero-inner cv-hero-inner">
-      <div>
+      <div class="cv-hero-text">
         <span class="label white">Berufliches Profil</span>
         <h1 class="page-hero-title">Nico <span class="page-hero-accent">Egerer</span></h1>
         <p class="page-hero-sub">Fachinformatiker für Anwendungsentwicklung · Wolfratshausen, Bayern</p>
         <div class="cv-hero-btns">
-          <a href="../CV/nico-egerer-cv.pdf" download class="btn btn-blau">⬇ Lebenslauf herunterladen</a>
+          <a href="../CV/nico-egerer-cv.pdf" download class="btn btn-blau">⬇ PDF herunterladen</a>
           <a href="/contact" class="btn btn-outline">Kontakt</a>
         </div>
       </div>
@@ -61,11 +31,10 @@
     </div>
   </section>
 
-  <!-- CV BODY -->
   <section class="cv-section">
     <div class="cv-inner">
 
-      <!-- LEFT COLUMN -->
+      <!-- LEFT -->
       <div class="cv-left">
 
         <div class="cv-block reveal">
@@ -83,7 +52,7 @@
           <h3 class="cv-block-title">Sprachen</h3>
           <div class="cv-lang-list">
             <div class="cv-lang">
-              <span>Deutsch</span>
+              <span class="cv-lang-name">Deutsch</span>
               <div class="lang-dots">
                 <span class="dot active"></span><span class="dot active"></span>
                 <span class="dot active"></span><span class="dot active"></span>
@@ -92,7 +61,7 @@
               <span class="lang-level">Muttersprache</span>
             </div>
             <div class="cv-lang">
-              <span>Englisch</span>
+              <span class="cv-lang-name">Englisch</span>
               <div class="lang-dots">
                 <span class="dot active"></span><span class="dot active"></span>
                 <span class="dot active"></span><span class="dot active"></span>
@@ -124,22 +93,21 @@
         <div class="cv-block reveal">
           <h3 class="cv-block-title">Interessen</h3>
           <ul class="cv-interests">
-            <li>⛰️ Bergwandern & Klettern</li>
+            <li>⛰️ Bergwandern &amp; Klettern</li>
             <li>🎹 Klavier</li>
-            <li>🏃 Sport & Fitness</li>
+            <li>🏃 Sport &amp; Fitness</li>
             <li>🎮 Game Development</li>
-            <li>🤖 KI & Machine Learning</li>
+            <li>🤖 KI &amp; Machine Learning</li>
           </ul>
         </div>
 
       </div>
 
-      <!-- RIGHT COLUMN -->
+      <!-- RIGHT -->
       <div class="cv-right">
 
         <div class="cv-block reveal">
           <h3 class="cv-block-title">Berufserfahrung</h3>
-
           <div class="cv-entry">
             <div class="cv-entry-header">
               <h4>Auszubildender Fachinformatiker AE</h4>
@@ -152,7 +120,6 @@
               <li>Einsatz von C++, Git und Linux im täglichen Arbeitsumfeld</li>
             </ul>
           </div>
-
           <div class="cv-entry">
             <div class="cv-entry-header">
               <h4>IT-Praktikum</h4>
@@ -164,12 +131,10 @@
               <li>Grundlagen Systemadministration und Netzwerktechnik</li>
             </ul>
           </div>
-
         </div>
 
         <div class="cv-block reveal">
           <h3 class="cv-block-title">Ausbildung</h3>
-
           <div class="cv-entry">
             <div class="cv-entry-header">
               <h4>Fachinformatiker für Anwendungsentwicklung</h4>
@@ -180,7 +145,6 @@
               <li>Duale Ausbildung mit Fokus auf C++, Softwarearchitektur und agile Methoden</li>
             </ul>
           </div>
-
           <div class="cv-entry">
             <div class="cv-entry-header">
               <h4>Allgemeine Hochschulreife</h4>
@@ -188,7 +152,6 @@
             </div>
             <span class="cv-company">Gymnasium Wolfratshausen</span>
           </div>
-
         </div>
 
         <div class="cv-block reveal">
@@ -221,51 +184,18 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- DOWNLOAD CTA -->
-  <section class="cv-download-section">
+  <section class="cv-download">
     <div class="cv-download-inner reveal">
       <span class="label white">Vollständiger Lebenslauf</span>
-      <h2 class="section-heading white">Als Pdf im Web Anschauen</h2>
-      <p>Alle Informationen kompakt als Html — perfekt als Zusammenfassung oder zum Herunterladen</p>
-      
-      <a href="../CV/CV.html" target="_blank" class="btn btn-outline">
-        CV öffnen
-      </a>
-      
+      <h2 class="section-heading white">Als PDF herunterladen</h2>
+      <p>Alle Informationen kompakt — perfekt zum Weiterleiten oder Ausdrucken.</p>
+      <a href="../CV/nico-egerer-cv.pdf" download class="btn btn-outline">⬇ PDF herunterladen</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-links">
-        <div class="footer-col"><a href="/" class="footer-main">Startseite</a></div>
-        <div class="footer-col">
-          <a href="/about" class="footer-main">Über Mich</a>
-          <a href="/CV" class="footer-sub">Lebenslauf</a>
-        </div>
-        <div class="footer-col"><a href="/projects" class="footer-main">Projekte</a></div>
-        <div class="footer-col"><a href="/contact" class="footer-main">Kontakt</a></div>
-        <div class="footer-col">
-          <a href="/profiles" class="footer-main">Meine Profile</a>
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-sub">GitHub</a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-sub">LinkedIn</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <a href="/" class="footer-logo">Nico</a>
-        <div class="footer-social">
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../shared.js"></script>
+  <script src="../assets/js/components.js"></script>
 </body>
 </html>

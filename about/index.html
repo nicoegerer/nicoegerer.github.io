@@ -9,51 +9,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Fredoka:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="../assets/css/shared.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- NAV + SIDEBAR → components.js -->
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">Nico</a>
-      <div class="nav-right">
-        <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-        <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-  <nav class="sidebar" id="sidebar" aria-hidden="true">
-    <button class="sidebar-close" id="sidebar-close" aria-label="Menü schließen">✕</button>
-    <div class="sidebar-links">
-      <a href="/" class="sidebar-link-main">Home</a>
-      <a href="/about" class="sidebar-link-main active">Über Mich</a>
-      <a href="/projects" class="sidebar-link-main">Projekte</a>
-      <a href="/JumpJump" class="sidebar-link-sub">JumpJump</a>
-      <a href="/work" class="sidebar-link-main">Erfahrung</a>
-      <a href="/contact" class="sidebar-link-main">Kontakt</a>
-      <a href="/profiles" class="sidebar-link-main">Meine Profile</a>
-      <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="sidebar-link-sub">GitHub</a>
-      <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="sidebar-link-sub">LinkedIn</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
   <section class="page-hero">
     <div class="page-hero-inner">
       <span class="label white">Wer ich bin</span>
       <h1 class="page-hero-title">Über <span class="page-hero-accent">Nico</span></h1>
-      <p class="page-hero-sub">Technikbegeisterter Entwickler, Sportler und Klavier­spieler aus dem Voralpenland.</p>
+      <p class="page-hero-sub">Technikbegeisterter Entwickler, Sportler und Klavierspieler aus dem Voralpenland.</p>
     </div>
   </section>
 
-  <!-- INTRO SPLIT -->
+  <!-- STORY SPLIT -->
   <section class="about-split">
     <div class="about-split-inner">
       <div class="about-split-img reveal">
@@ -65,22 +35,9 @@
       <div class="about-split-text">
         <span class="label">Meine Geschichte</span>
         <h2 class="section-heading dark reveal">Von der Konsole<br />zur Karriere</h2>
-        <p class="about-body reveal reveal-delay-1">
-          Ich bin 19 Jahre alt und komme aus Wolfratshausen im Voralpenland. Meine
-          Begeisterung für Technik und Computer hat mich schon in der Kindheit gepackt —
-          lange bevor ich wusste, was Programmierung überhaupt ist.
-        </p>
-        <p class="about-body reveal reveal-delay-2">
-          Alles begann mit einem Moment, der mich fasziniert hat: Jemand öffnet die Konsole,
-          gibt ein paar Befehle ein — und plötzlich funktioniert alles wieder. Das wollte ich
-          auch können. Heute entwickle ich eigene Projekte, lerne ständig neue Technologien
-          und arbeite an meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung.
-        </p>
-        <p class="about-body reveal reveal-delay-3">
-          Wenn ich nicht gerade code, bin ich beim Sport, in den Bergen oder am Klavier.
-          Ich glaube daran, dass Technik und Kreativität keine Gegensätze sind — sie
-          beflügeln sich gegenseitig.
-        </p>
+        <p class="about-body reveal reveal-delay-1">Ich bin 19 Jahre alt und komme aus Wolfratshausen im Voralpenland. Meine Begeisterung für Technik hat mich schon in der Kindheit gepackt — lange bevor ich wusste, was Programmierung überhaupt ist.</p>
+        <p class="about-body reveal reveal-delay-2">Alles begann mit einem Moment: Jemand öffnet die Konsole, gibt Befehle ein — und plötzlich funktioniert alles wieder. Das wollte ich auch können. Heute entwickle ich eigene Projekte und arbeite an meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung.</p>
+        <p class="about-body reveal reveal-delay-3">Wenn ich nicht gerade code, bin ich beim Sport, in den Bergen oder am Klavier. Technik und Kreativität sind für mich keine Gegensätze.</p>
         <div class="about-actions reveal reveal-delay-4">
           <a href="/CV" class="btn btn-dark-outline">Lebenslauf ansehen</a>
           <a href="/contact" class="link-arrow">Kontakt aufnehmen →</a>
@@ -90,16 +47,16 @@
   </section>
 
   <!-- VALUES -->
-  <section class="values">
+  <section class="values-section">
     <div class="values-inner">
       <div class="values-header reveal">
         <span class="label white">Was mich antreibt</span>
-        <h2 class="section-heading white">Werte & Mission</h2>
+        <h2 class="section-heading white">Werte &amp; Mission</h2>
       </div>
       <div class="values-grid">
         <div class="value-card reveal reveal-delay-1">
           <div class="value-icon">🎯</div>
-          <h3>Ergebnisorientierung</h3>
+          <h3>Ergebnis&shy;orientierung</h3>
           <p>Am Ende zählt das funktionierende Produkt. Ich liebe das Gefühl, wenn etwas, das ich gebaut habe, wirklich läuft.</p>
         </div>
         <div class="value-card reveal reveal-delay-2">
@@ -132,37 +89,20 @@
         <div class="skill-group reveal reveal-delay-1">
           <h4 class="skill-group-title">Programmiersprachen</h4>
           <div class="skill-bars">
-            <div class="skill-bar-item">
-              <span class="skill-name">C++</span>
-              <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span class="skill-name">Python</span>
-              <div class="skill-track"><div class="skill-fill" style="width:70%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span class="skill-name">HTML / CSS</span>
-              <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span class="skill-name">JavaScript</span>
-              <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
-            </div>
+            <div class="skill-bar-item"><span class="skill-name">C++</span><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
+            <div class="skill-bar-item"><span class="skill-name">Python</span><div class="skill-track"><div class="skill-fill" style="width:70%"></div></div></div>
+            <div class="skill-bar-item"><span class="skill-name">HTML / CSS</span><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div></div>
+            <div class="skill-bar-item"><span class="skill-name">JavaScript</span><div class="skill-track"><div class="skill-fill" style="width:65%"></div></div></div>
           </div>
         </div>
         <div class="skill-group reveal reveal-delay-2">
           <h4 class="skill-group-title">Tools &amp; Technologien</h4>
           <div class="skill-tags-wrap">
-            <span class="tag-dark">Git</span>
-            <span class="tag-dark">Linux</span>
-            <span class="tag-dark">Raspberry Pi</span>
-            <span class="tag-dark">MQTT</span>
-            <span class="tag-dark">Node-RED</span>
-            <span class="tag-dark">WebAssembly</span>
-            <span class="tag-dark">Figma</span>
-            <span class="tag-dark">Webflow</span>
-            <span class="tag-dark">VS Code</span>
-            <span class="tag-dark">CMake</span>
+            <span class="tag-dark">Git</span><span class="tag-dark">Linux</span>
+            <span class="tag-dark">Raspberry Pi</span><span class="tag-dark">MQTT</span>
+            <span class="tag-dark">Node-RED</span><span class="tag-dark">WebAssembly</span>
+            <span class="tag-dark">Figma</span><span class="tag-dark">VS Code</span>
+            <span class="tag-dark">CMake</span><span class="tag-dark">SDL2</span>
           </div>
         </div>
         <div class="skill-group reveal reveal-delay-3">
@@ -181,73 +121,36 @@
   </section>
 
   <!-- TIMELINE -->
-  <section class="tl-section" id="tl-section" style="background: var(--dunkel); padding: var(--gap-xl) var(--gap-m);">
+  <section class="tl-section" id="tl-section">
     <div class="tl-section-inner">
       <div class="tl-header reveal">
         <span class="label white">Mein Weg</span>
         <h2 class="section-heading white">Werdegang</h2>
       </div>
       <div class="tl-wrap">
-        <div class="tl-line-col">
-          <div class="tl-track">
-            <div class="tl-fill" id="tl-fill"></div>
-          </div>
-        </div>
+        <div class="tl-line-col"><div class="tl-track"><div class="tl-fill" id="tl-fill"></div></div></div>
         <div class="tl-entries" id="tl-entries">
-          <div class="tl-card" data-tl="0">
-            <span class="tl-year">2026</span>
-            <h3 class="tl-title">Website &amp; JumpJump live</h3>
-            <p class="tl-text">Persönliche Portfolio-Website deployed und JumpJump im Browser spielbar gemacht. Erster großer öffentlicher Release.</p>
-          </div>
-          <div class="tl-card" data-tl="1">
-            <span class="tl-year">2024</span>
-            <h3 class="tl-title">Ausbildungsbeginn bei Reiser</h3>
-            <p class="tl-text">Start der Ausbildung zum Fachinformatiker für Anwendungsentwicklung bei Reiser Simulation and Training.</p>
-          </div>
-          <div class="tl-card" data-tl="2">
-            <span class="tl-year">2023</span>
-            <h3 class="tl-title">Erste eigene Projekte</h3>
-            <p class="tl-text">Beginn mit C++ und ersten größeren Eigenentwicklungen. Raspberry Pi Projekte und Spiele.</p>
-          </div>
-          <div class="tl-card" data-tl="3">
-            <span class="tl-year">2021</span>
-            <h3 class="tl-title">IT-Praktikum</h3>
-            <p class="tl-text">Erste Praxiserfahrung im IT-Umfeld gesammelt. Grundlagen der Systemadministration und Netzwerktechnik.</p>
-          </div>
-          <div class="tl-card" data-tl="4">
-            <span class="tl-year">~2015</span>
-            <h3 class="tl-title">Der Funke</h3>
-            <p class="tl-text">Erster Kontakt mit Konsolen und Terminalkommandos. Die Faszination für Technik wurde geweckt.</p>
-          </div>
+          <div class="tl-card" data-tl="0"><span class="tl-year">2026</span><h3 class="tl-title">Website &amp; JumpJump live</h3><p class="tl-text">Persönliche Portfolio-Website deployed und JumpJump im Browser spielbar gemacht.</p></div>
+          <div class="tl-card" data-tl="1"><span class="tl-year">2024</span><h3 class="tl-title">Ausbildungsbeginn bei Reiser</h3><p class="tl-text">Start der Ausbildung zum Fachinformatiker für Anwendungsentwicklung.</p></div>
+          <div class="tl-card" data-tl="2"><span class="tl-year">2023</span><h3 class="tl-title">Erste eigene Projekte</h3><p class="tl-text">Beginn mit C++ und ersten größeren Eigenentwicklungen.</p></div>
+          <div class="tl-card" data-tl="3"><span class="tl-year">2021</span><h3 class="tl-title">IT-Praktikum</h3><p class="tl-text">Erste Praxiserfahrung im IT-Umfeld.</p></div>
+          <div class="tl-card" data-tl="4"><span class="tl-year">~2015</span><h3 class="tl-title">Der Funke</h3><p class="tl-text">Erster Kontakt mit Konsolen und Terminalkommandos. Die Faszination für Technik wurde geweckt.</p></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOBBIES -->
-  <section class="hobbies">
+  <section class="hobbies-section">
     <div class="hobbies-inner">
-      <div class="hobbies-text reveal">
+      <div class="hobbies-header reveal">
         <span class="label">Jenseits des Bildschirms</span>
         <h2 class="section-heading dark">Leben abseits des Codes</h2>
-        <p class="hobbies-body">Ausgleich ist für mich genauso wichtig wie der Job. Sport, Natur und Musik helfen mir, kreativ und fokussiert zu bleiben.</p>
       </div>
       <div class="hobbies-cards">
-        <div class="hobby-card reveal reveal-delay-1">
-          <div class="hobby-icon">🏃‍♂️</div>
-          <h4>Sport</h4>
-          <p>Laufen, Krafttraining und alles, was den Kopf freibläst.</p>
-        </div>
-        <div class="hobby-card reveal reveal-delay-2">
-          <div class="hobby-icon">⛰️</div>
-          <h4>Berge</h4>
-          <p>Wandern und Klettern in den bayerischen Alpen. Nichts schlägt den Gipfelblick.</p>
-        </div>
-        <div class="hobby-card reveal reveal-delay-3">
-          <div class="hobby-icon">🎹</div>
-          <h4>Klavier</h4>
-          <p>Musik als kreatives Gegengewicht zur Technik. Von Klassik bis Eigenkomposition.</p>
-        </div>
+        <div class="hobby-card reveal reveal-delay-1"><div class="hobby-icon">🏃‍♂️</div><h4>Sport</h4><p>Laufen, Krafttraining und alles, was den Kopf freibläst.</p></div>
+        <div class="hobby-card reveal reveal-delay-2"><div class="hobby-icon">⛰️</div><h4>Berge</h4><p>Wandern und Klettern in den bayerischen Alpen.</p></div>
+        <div class="hobby-card reveal reveal-delay-3"><div class="hobby-icon">🎹</div><h4>Klavier</h4><p>Musik als kreatives Gegengewicht zur Technik.</p></div>
       </div>
     </div>
   </section>
@@ -258,40 +161,14 @@
       <span class="label white">Noch Fragen?</span>
       <h2 class="section-heading white">Lass uns reden</h2>
       <p>Ich freue mich über neue Kontakte, spannende Projekte oder einfach ein gutes Gespräch.</p>
-      <div class="about-cta-btns">
+      <div class="cta-btns">
         <a href="/contact" class="btn btn-outline">Kontakt aufnehmen</a>
         <a href="/CV" class="btn btn-light">Lebenslauf</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-links">
-        <div class="footer-col"><a href="/" class="footer-main">Startseite</a></div>
-        <div class="footer-col">
-          <a href="/about" class="footer-main">Über Mich</a>
-          <a href="/CV" class="footer-sub">Lebenslauf</a>
-        </div>
-        <div class="footer-col"><a href="/projects" class="footer-main">Projekte</a></div>
-        <div class="footer-col"><a href="/contact" class="footer-main">Kontakt</a></div>
-        <div class="footer-col">
-          <a href="/profiles" class="footer-main">Meine Profile</a>
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" class="footer-sub">GitHub</a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" class="footer-sub">LinkedIn</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <a href="/" class="footer-logo">Nico</a>
-        <div class="footer-social">
-          <a href="https://github.com/nicoegerer" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon github-icon"></a>
-          <a href="https://www.linkedin.com/in/nico-egerer/" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-icon linkedin-icon"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../shared.js"></script>
+  <!-- FOOTER → components.js -->
+  <script src="../assets/js/components.js"></script>
 </body>
 </html>
